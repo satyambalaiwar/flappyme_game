@@ -81,6 +81,8 @@ function update() {
     if (bird.y > board.height) {
         gameOver = true;
     }
+
+    //Bump Sound
     function playSound () {
         let ding = new Audio('ahshitsound.mp3');
         ding.play();
