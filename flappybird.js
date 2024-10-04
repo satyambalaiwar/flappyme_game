@@ -81,6 +81,10 @@ function update() {
     if (bird.y > board.height) {
         gameOver = true;
     }
+    function playSound () {
+        let ding = new Audio('ahshitsound.mp3');
+        ding.play();
+    }
 
     //pipes
     for (let i = 0; i < pipeArray.length; i++) {
@@ -94,7 +98,8 @@ function update() {
         }
 
         if (detectCollision(bird, pipe)) {
-            gameOver = true;
+            gameOver = true
+            playSound();
         }
     }
 
